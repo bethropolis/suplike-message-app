@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>suplike messages</title>
+    <link rel="shortcut icon" href="icons/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css?lg">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
+    <link rel="stylesheet" href="../../lib/fontawesome-free-6.0.0-beta2-web/css/all.css">
+    <link rel="stylesheet" href="lib/normalize/normalize.min.css">
+    <script src="lib/vue/vue.js"></script>
+    <script src="lib/jquery/jquery.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="icons/logo.png" alt="suplike chat">
+        </div>
+        <div class="icons">
+            <i class="fa fa-ellipsis-v"></i>
+        </div>
+    </header>
+    <main>
+        <div class="chat" style="display: none;">
+            <div class="main-content">
+                <form action="" method="post" class="login">
+                    <div class="form-content">
+                        <div class="form-line">
+                            <label for="email">Username or Email</label>
+                            <input class="input-data shadow" type="email" name="user-email"
+                                placeholder="ex: your@email.com">
+                        </div>
+                        <div class="form-line">
+                            <label for="password">Password</label>
+                            <input class="input-data shadow" type="password" name="user-pass" placeholder="******">
+                        </div>
+                        <a href="">Forgot Password?</a>
+                        <div class="form-line login">
+                            <input type="submit" value="Login" name="bt-login">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <p>Don't have an account? <a href="">Sign Up</a></p>
+        </div>
+        <div class="profile">
+            <div class="container">
+                <div class="card">
+                    <div class="card-body">
+                        <ul class="list-unstyled pl-0">
+                            <li class="birthday-item">
+                                <img src="https://randomuser.me/api/portraits/women/78.jpg" height="36"
+                                    class="rounded-circle border shadow">
+                                <p class="d-inline-block pl-1">Sylvia Black<br><small class="text-grey">29 Years</small>
+                                </p>
+                            </li>
+                            <li class="birthday-item">
+                                <img src="https://randomuser.me/api/portraits/men/8.jpg" height="36"
+                                    class="rounded-circle border shadow">
+                                <p class="d-inline-block pl-1">Roger Armstrong<br><small class="text-grey">32
+                                        Years</small></p>
+                            </li>
+                            <li class="birthday-item">
+                                <img src="https://randomuser.me/api/portraits/women/39.jpg" height="36"
+                                    class="rounded-circle border shadow">
+                                <p class="d-inline-block pl-1">Florence Barnett<br><small class="text-grey">36
+                                        Years</small></p>
+                            </li>
+                            <li class="birthday-item">
+                                <img src="https://randomuser.me/api/portraits/men/53.jpg" height="36"
+                                    class="rounded-circle border shadow">
+                                <p class="d-inline-block pl-1">Dwayne Peck<br><small class="text-grey">34 Years</small>
+                                </p>
+                            </li>
+                            <li class="birthday-item">
+                                <img src="https://randomuser.me/api/portraits/women/57.jpg" height="36"
+                                    class="rounded-circle border shadow">
+                                <p class="d-inline-block pl-1">Ethel Hale<br><small class="text-grey">29 Years</small>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-button">
+                        <button>View All</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <nav class="tab" data-selected="2">
+        <div class="icons">
+            <div data-index="1" class="icon fa fa-comment-alt"></div>
+            <div data-index="2" class="icon fal fa-plus"></div>
+            <div data-index="3" class="icon fa fa-user fa-swap-opacity"></div>
+        </div>
+        <div class="bar">
+            <div class="cap"></div>
+            <div class="middle">
+                <div class="side"></div>
+                <div class="circle"></div>
+                <div class="side"></div>
+            </div>
+            <div class="cap"></div>
+        </div>
+    </nav>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

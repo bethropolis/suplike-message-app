@@ -1,0 +1,303 @@
+:root {
+  --cotton-candy: #ffcbf2ff;
+  --mauve: #f3c4fbff;
+  --mauve-2: #ecbcfdff;
+  --mauve-3: #e5b3feff;
+  --mauve-4: #e2afffff;
+  --mauve-5: #deaaffff;
+  --mauve-6: #d8bbffff;
+  --lavender-blue: #d0d1ffff;
+  --uranian-blue: #c8e7ffff;
+  --celeste: #c0fdffff;
+  --light: #f8f9fc;
+}
+body {
+  font-family: "Poppins";
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  background: var(--light);
+  max-height: 100vh;
+}
+
+header {
+  padding: 2px;
+  width: 100%;
+  height: 2.3rem;
+  background: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .icons {
+  align-self: flex-end center;
+}
+header .icons i {
+  margin: 0.3rem;
+  padding-right: 7px;
+}
+
+header .logo {
+  align-self: flex-start center;
+}
+
+header .logo img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+body nav.tab {
+  position: fixed;
+  display: flex;
+  align-items: stretch;
+  padding: 0;
+  width: 100%;
+  height: 4rem;
+  bottom: 0;
+}
+body nav.tab.moving .icon {
+  pointer-events: none;
+}
+body nav.tab[data-selected="1"] .icon:nth-child(1),
+body nav.tab[data-selected="2"] .icon:nth-child(2),
+body nav.tab[data-selected="3"] .icon:nth-child(3) {
+  top: -1.5rem;
+  color: #6247aa;
+  font-size: 2rem;
+  transition: 0.25s 0.375s;
+  pointer-events: none;
+}
+body nav.tab[data-selected="1"] .icon:nth-child(1).initialised,
+body nav.tab[data-selected="2"] .icon:nth-child(2).initialised,
+body nav.tab[data-selected="3"] .icon:nth-child(3).initialised {
+  animation: hide 0.9s forwards;
+}
+body nav.tab[data-selected="1"] .bar .middle .side:first-child,
+body nav.tab[data-selected="3"] .bar .middle .side:last-child {
+  flex-grow: 0;
+}
+body nav.tab[data-selected="1"] .icon:nth-child(1).initialised {
+  right: 0.48rem;
+}
+body nav.tab[data-selected="3"] .icon:nth-child(3).initialised {
+  left: 0.48rem;
+}
+
+body nav.tab .icons {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  justify-content: space-around;
+  width: calc(100% - 2rem);
+  padding: 0 1rem;
+}
+body nav.tab .icons .icon {
+  position: relative;
+  top: 0rem;
+  width: 4rem;
+  line-height: 4rem;
+  font-size: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition-delay: 0.1875s;
+}
+body nav.tab .icons .icon.initialised {
+  animation: hide2 0.375s;
+}
+body nav.tab .bar {
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  align-items: stretch;
+  filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.1))
+    drop-shadow(0 0 0.25rem rgba(0, 0, 0, 0.1));
+  width: 100%;
+  height: 100%;
+}
+body nav.tab .bar .cap {
+  background: white;
+  width: 1rem;
+}
+body nav.tab .bar .cap:first-child {
+  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 0.5rem;
+  box-shadow: 0.25rem 0 0 white;
+}
+body nav.tab .bar .cap:last-child {
+  border-bottom-right-radius: 1rem;
+  border-top-right-radius: 0.5rem;
+  box-shadow: -0.25rem 0 0 white;
+}
+body nav.tab .bar .middle {
+  flex-grow: 1;
+  position: relative;
+  display: flex;
+}
+body nav.tab .bar .middle .circle {
+  position: relative;
+  top: -1.75rem;
+  width: 7rem;
+  height: 5.75rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='112' height='92' viewBox='0 0 112 92'%3E%3Ccircle cx='56' cy='36' r='36' fill='%23FFF'/%3E%3Cpath d='M104 35.2L104 35.2c0 26.3-20.9 48.3-47.2 48.8C29.9 84.4 8 62.8 8 36v-0.8c0-4-3.2-7.2-7.2-7.2H0v64h112V28h-0.8C107.2 28 104 31.2 104 35.2z' fill='%23FFF'/%3E%3C/svg%3E");
+}
+body nav.tab .bar .middle .side {
+  flex-grow: 1;
+  background: white;
+  transition: 0.75s ease;
+}
+
+main.chat {
+  width: 100%;
+  height: auto;
+}
+
+body main {
+  background-color: var(--light);
+  justify-content: center;
+  margin: 15px auto;
+  width: 100%;
+  height: 100vh;
+}
+body main .form-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+body main .form-content .form-line {
+  width: 100%;
+  flex-basis: 100%;
+}
+body main .form-content .form-line label {
+  color: #999;
+  font-size: 14px;
+  padding-left: 8px;
+}
+body main .form-content .form-line input,
+body main .form-content .form-line ::placeholder {
+  font-family: "Poppins";
+  padding: 12px;
+  width: 80%;
+  margin: 0;
+  border: 0;
+  font-size: 100%;
+  outline: none;
+}
+
+body main .form-content .form-line input.input-data {
+  border: none;
+  border-radius: 15px;
+  padding: 10px 8px;
+  margin: 10px 0;
+  width: 95%;
+}
+body main .form-content .form-line input[type="submit"] {
+  background-color: rgba(87, 32, 214, 0.836);
+  border: none;
+  padding: 10px 65px;
+  border-radius: 20px;
+  color: var(--light);
+  font-size: 18px;
+}
+body main .form-content .form-line.login {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+body main p {
+  text-align: start;
+}
+body main a {
+  color: var(--mauve-4);
+}
+
+p {
+    font-size: 14px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.card {
+    background-color: var(--light);
+    border-radius: 4px;
+    box-shadow: 40px 40px 15px 0 rgba(0, 0, 0, 0.125);
+    padding: 0 6px;
+    min-width: 80%;
+   height: 100vh;
+    transition: box-shadow 0.25s ease-in-out;
+}
+.card:hover {
+    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.125);
+}
+
+li.birthday-item{
+ margin: 8px auto 
+}
+.list-unstyled {
+    list-style: none;
+}
+.rounded-circle {
+    border-radius: 50%;
+}
+.border {
+    border: 1px solid #ccc;
+}
+.shadow {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .15);
+}
+.pl-0 {
+    padding-left: 0;
+}
+.d-inline-block {
+    display: inline-block;
+}
+.pl-1 {
+    padding-left: 4px;
+}
+.text-grey {
+    color: #8f8f8f;
+}
+.card-button button {
+    width: 90%;
+    padding: 10px;
+    color: var(--light);
+    background-image: linear-gradient(135deg, #c51162, #ff4081);
+    border: none;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 4px;
+    box-shadow: 0 4px 5px 0 #f06292;
+    cursor: pointer;
+    transition: box-shadow 0.125s ease-in-out;
+}
+.card-button button:hover {
+    box-shadow: 0 0 5px 0 #f06292;
+}
+
+@keyframes hide {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+@keyframes hide2 {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  15%,
+  75% {
+    /*This is the difference*/
+    opacity: 0;
+  }
+}
