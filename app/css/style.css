@@ -84,10 +84,10 @@ body nav.tab[data-selected="3"] .bar .middle .side:last-child {
   flex-grow: 0;
 }
 body nav.tab[data-selected="1"] .icon:nth-child(1).initialised {
-  right: 0.48rem;
+  right: 0.5rem;
 }
 body nav.tab[data-selected="3"] .icon:nth-child(3).initialised {
-  left: 0.48rem;
+  left: 0.5rem;
 }
 
 body nav.tab .icons {
